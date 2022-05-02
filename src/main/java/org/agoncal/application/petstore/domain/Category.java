@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Antonio Goncalves
@@ -24,6 +25,7 @@ import java.util.List;
         @NamedQuery(name = Category.FIND_ALL, query = "SELECT c FROM Category c")
 })
 @XmlRootElement
+@NoArgsConstructor
 public class Category {
 
     // ======================================
@@ -55,9 +57,6 @@ public class Category {
     // ======================================
     // =            Constructors            =
     // ======================================
-
-    public Category() {
-    }
 
     public Category(String name, String description) {
         this.name = name;
